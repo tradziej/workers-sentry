@@ -5,7 +5,7 @@ class Sentry extends Toucan {
     constructor(event, dsn, opts = {}) {
         // Wrap Toucan with some better defaults
         super({
-            dsn: process.env.SENTRY_DSN,
+            dsn: dsn,
             event: event,
             allowedHeaders: [
                 'user-agent',
